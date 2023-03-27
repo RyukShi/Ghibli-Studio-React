@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       {(loading) && (
-        <h1>Loading...</h1>
+        <img src="../src/assets/images/ghibli_studio.jpg" alt="ghibli studio image" />
       )}
 
       {(films.length > 0) && (
