@@ -7,6 +7,7 @@ function App() {
   const { loading, films } = useContext(DataContext)
   const [search, setSearch] = useState("")
   const [director, setDirector] = useState("")
+  const [sortDescending, setSortDescending] = useState(false)
 
   const handleChangeSearch = (e) => {
     setSearch(e.target.value.toLowerCase())
@@ -22,6 +23,7 @@ function App() {
         (film.title.toLowerCase().includes(search) || film.original_title.toLowerCase().includes(search))
         : true) &&
       (director ? film.director === director : true))
+    .sort((a, b) => (sortDescending) ? b.release_date - a.release_date : a.release_date - b.release_date)
     .map(film => <FilmCard key={film.id} film={film} />)
 
   /* Extract unique director from films array and create options */
@@ -54,6 +56,12 @@ function App() {
               <option value="">Choose director to filter</option>
               {DIRECTORS_OPTIONS}
             </select>
+            <button onClick={() => setSortDescending((v) => !v)}>
+              {(sortDescending) ?
+                "Sort by ascending release date" :
+                "Sort by descending release date"
+              }
+            </button>
           </div>
           <div className="film-grid">
             {showFilms}
