@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import DataContext from '../context/DataContext'
 import FilmCard from './FilmCard'
+import GhibliStudioLogo from '../assets/images/ghibli_studio.jpg'
 
 const FilmsList = () => {
   const { loading, films } = useContext(DataContext)
@@ -41,7 +42,7 @@ const FilmsList = () => {
   return (
     <div>
       {(loading) && (
-        <img src="../src/assets/images/ghibli_studio.jpg" alt="ghibli studio image" />
+        <img src={GhibliStudioLogo} alt="ghibli studio image" />
       )}
 
       {(films.length > 0) && (
