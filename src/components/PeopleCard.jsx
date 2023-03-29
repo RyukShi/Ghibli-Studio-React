@@ -3,9 +3,9 @@ const PeopleCard = ({ person }) => {
     <div className="people-card">
       <h3>{person.name}</h3>
       <p>Gender: {person.gender}</p>
-      {(person.age) && (
-        <p>{person.age}</p>
-      )}
+      <p>Age : {person.age}</p>
+      <p>Eyes color: {(person.eye_color)}</p>
+      <p>Hair color: {person.hair_color}</p>
     </div>
   )
 }
