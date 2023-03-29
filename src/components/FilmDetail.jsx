@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import DataContext from '../context/DataContext'
+import PeopleList from './PeopleList'
 
 const FilmDetail = () => {
   const { id } = useParams()
@@ -24,7 +25,8 @@ const FilmDetail = () => {
     <div className="film-detail">
       <img src={film.movie_banner} alt={`${film.title} movie banner`} />
       <h1>{`${film.title} (${film.release_date})`}</h1>
-      <p style={{textAlign: 'justify'}}>{film.description}</p>
+      <p style={{ textAlign: 'justify' }}>{film.description}</p>
+      {<PeopleList people={film.people} />}
     </div>
   )
 }
