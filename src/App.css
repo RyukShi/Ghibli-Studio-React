@@ -15,6 +15,11 @@
   position: relative;
   width: 350px;
   height: 500Px;
+  transition: transform 0.5s ease;
+}
+
+.film-card:hover {
+  transform: translateY(-5px);
 }
 
 .film-card:hover img {
@@ -53,4 +58,18 @@
 .film-card-subtitle {
   font-size: 2rem;
   font-style: italic;
+}
+
+.film-detail {
+  width: 100%;
+}
+
+.film-detail img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.film-detail h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
