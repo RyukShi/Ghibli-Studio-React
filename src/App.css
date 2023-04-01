@@ -91,3 +91,13 @@
   background-color: #60a5fa;
   transition-duration: 400ms;
 }
+
+.fixed-link {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  color: #242424;
+}
