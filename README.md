@@ -1,5 +1,6 @@
 # Ghibli-Studio-React
-This application allows you to view the various animated films produced by Ghibli Studio.
+This application allows you to view the various animated films produced by Ghibli Studio.  
+This application is available, click on this [LINK](https://ryukshi.github.io/Ghibli-Studio-React/ "Ghibli Studio React") to discover it.
 
 ## Home screenshot
 
@@ -33,4 +34,10 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+### Locally preview production build
+
+```sh
+npm run preview
 ```
